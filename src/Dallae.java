@@ -1,6 +1,6 @@
 public class Dallae {
     static void moveDallae(){
-        String location = SnackDrop.getRandomLocation();
+        String location = SnackDropper.getRandomLocation();
         System.out.println("🐶 달래가 " + location + "에 갔다!");
 
         dallaeAction(location);
@@ -10,13 +10,13 @@ public class Dallae {
     static void eatSnack(String location){
         double randomNum = Math.random();
 
-        for (int i = 0; i < SnackDrop.droppedSnacks.length; i++){
-            if (SnackDrop.droppedSnacks[i] != null && SnackDrop.droppedSnacks[i].equals(location)){
+        for (int i = 0; i < SnackDropper.droppedSnacks.length; i++){
+            if (SnackDropper.droppedSnacks[i] != null && SnackDropper.droppedSnacks[i].equals(location)){
 
                 if (randomNum <= 0.7) {
                     System.out.println("   -> 😏 냠냠! 달래가 간식을 먹었다!");
-                    SnackDrop.droppedSnacks[i] = null;
-                    SnackDrop.snackCount--;
+                    SnackDropper.droppedSnacks[i] = null;
+                    SnackDropper.snackCount--;
                 }else {
                     System.out.println("   -> 🍖🐶‼️ 간식을 무시하고 그냥 지나간다...");
                 }
