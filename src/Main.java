@@ -1,6 +1,7 @@
 public class Main {
     public static void main(String[] args) {
-        SnackDrop.dropSnack();
+        SnackDropper.dropSnack();
         Dallae.moveDallae();
+        SnackDropper.dropAllSnack();
     }
 }
